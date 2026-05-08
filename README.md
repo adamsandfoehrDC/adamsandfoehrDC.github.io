@@ -1,1 +1,0 @@
-# adamsandfoehrDC.github.io
