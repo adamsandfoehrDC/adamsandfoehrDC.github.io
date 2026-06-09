@@ -17,4 +17,33 @@ ul {
     border: 5px solid purple;
     border-radius: 20px;
     padding: 30px;
+    list-style-type: none;
+}
+
+h1 {
+    color: darkslategray;
+    border-bottom: 10px dotted purple;
+    font-size: 2rem;
+}
+
+h2 {
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.job-title {
+    color: darkslategray;
+}
+
+a {
+    color: green;
+}
+
+a:hover {
+    color: darkgreen;
+    text-decoration: none;
+}
+
+a:focus {
+    text-decoration: none;
 }
