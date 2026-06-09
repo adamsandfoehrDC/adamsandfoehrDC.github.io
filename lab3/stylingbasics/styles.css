@@ -4,4 +4,10 @@ html {
 
 body {
   font: 1.2em / 1.5 system-ui;
+  padding: 20px;
+  width: 500px;
+  background-color: #efefef;
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
