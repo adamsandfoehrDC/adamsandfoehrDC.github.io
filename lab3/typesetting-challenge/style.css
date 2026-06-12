@@ -33,3 +33,18 @@ footer {
 footer p {
     text-align: center;
 }
+
+/* Fonts */
+body {
+    font-family: "Lexend", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+h1, h2 {
+    font-family: "Montagu Slab", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
