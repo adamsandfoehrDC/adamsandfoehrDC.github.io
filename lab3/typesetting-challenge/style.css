@@ -76,3 +76,25 @@ section h2 + p  {
     text-indent: 2rem;
 }
 
+/* Link Styling */
+a:link {
+    color: #de1414;
+    text-decoration: underline;
+}
+
+a:visited {
+    color: #850d0d;
+    text-decoration: underline;
+}
+
+a:focus, a:hover {
+    color: #aa6666;
+    text-decoration: none;
+    outline: none;
+}
+
+a[href^="http"] {
+    background: url(./img/external-link-52.png) no-repeat right center;
+    background-size: 8px;
+    padding-right: 10px;
+}
