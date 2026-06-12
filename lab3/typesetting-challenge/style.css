@@ -107,6 +107,9 @@ ol, ul {
 
 ul li {
     list-style: none;
+}
+
+section ul li, aside ul li {
     background: url(./img/grad-cap-bullet-icon.png) no-repeat left;
     background-size: 16px;
     padding-left: 20px;
@@ -115,4 +118,44 @@ ul li {
 
 ol li {
     list-style: none;
+}
+
+/* Nav Menu Styling */
+nav {
+    font-family: "Montagu Slab", "Courier New", "Courier", serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+nav ul {
+    padding: 0;
+    width: 100%;
+}
+
+nav li {
+    margin-bottom: 0.3rem;
+}
+
+nav li a {
+    border: 3px solid #de1414;
+    border-radius: 4px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    font-size: 1.3rem;
+    padding: 3px;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    line-height: 2;
+}
+
+nav a:link, nav a:visited {
+    color: #de1414;
+    text-decoration: 0;
+}
+
+nav a:focus, nav a:hover {
+    color: #aa6666;
+    border: 3px solid #aa6666
 }
