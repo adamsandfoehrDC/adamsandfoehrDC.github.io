@@ -98,3 +98,21 @@ a[href^="http"] {
     background-size: 8px;
     padding-right: 10px;
 }
+
+/* List Styling */
+ol, ul {
+    line-height: 1.3rem;
+    margin: auto;
+}
+
+ul li {
+    list-style: none;
+    background: url(./img/grad-cap-bullet-icon.png) no-repeat left;
+    background-size: 16px;
+    padding-left: 20px;
+    background-position: 0px 3px;
+}
+
+ol li {
+    list-style: none;
+}
