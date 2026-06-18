@@ -75,3 +75,9 @@ nav ul {
     grid-template-columns: 3fr 1fr;
     gap: 20px;
 }
+
+.photos {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 5px;
+}
