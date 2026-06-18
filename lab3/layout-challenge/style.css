@@ -64,3 +64,14 @@ nav ul {
     display: flex;
     justify-content: space-around;
 }
+
+.feature {
+    float: left;
+    margin: 8px 30px 20px 0px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
