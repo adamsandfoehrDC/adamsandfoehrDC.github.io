@@ -28,24 +28,34 @@ function returnRandomStoryString() {
     // when inserting embeddded expressions you must use ` (~ key) to wrap the text, otherwise JS treats entire block as a string
     let storyText = `It was 94 Fahrenheit outside, so ${randomCharacter} went for a walk. When they got to ${randomPlace}, they stared in horror for a few moments, then ${randomEvent}. Bob saw the whole thing, but was not surprised — ${randomCharacter} weighs 300 pounds, and it was a hot day.`
 
-  return storyText;
+    return storyText;
 }
 
 // Event listener and partial generate function definition
-
 generateBtn.addEventListener("click", generateStory);
 
 function generateStory() {
-  if (customName.value !== "") {
-    const name = customName.value;
-  }
+    let newStory = returnRandomStoryString();
 
-  if (document.getElementById("uk").checked) {
-    const weight = Math.round(300);
-    const temperature = Math.round(94);
-  }
+    if (customName.value !== "") {
+        const name = customName.value;
 
-  // TODO: replace "" with the correct expression
-  story.textContent = "";
-  story.style.visibility = "visible";
+        newStory = newStory.replace("Bob", name);
+    }
+
+    if (document.getElementById("uk").checked) {
+        // lbs to stone = lbs / 14
+        const weight = `${Math.round(300 / 14)} stone`;
+        // f to c = (fah - 32) * (5 / 9)
+        const temperature = `${Math.round(94 - 32) * (5 / 9)} Celsius`;
+
+        newStory = newStory.replace("300 pounds", weight);
+        
+        newStory = newStory.replace("94 Fahrenheit", temperature);
+
+    }
+
+    // TODO: replace "" with the correct expression
+    story.textContent = newStory;
+    story.style.visibility = "visible";
 }
