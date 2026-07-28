@@ -47,7 +47,9 @@ function generateStory() {
         // lbs to stone = lbs / 14
         const weight = `${Math.round(300 / 14)} stone`;
         // f to c = (fah - 32) * (5 / 9)
-        const temperature = `${Math.round(94 - 32) * (5 / 9)} Celsius`;
+        // using toFixed as output is a string and I want a number rounded to one decimal place
+        // info obtained from: https://stackoverflow.com/questions/7342957/how-do-you-round-to-one-decimal-place-in-javascript
+        const temperature = `${((94 - 32) * (5 / 9)).toFixed(1)} Celsius`;
 
         newStory = newStory.replace("300 pounds", weight);
         
