@@ -61,6 +61,16 @@ btn.addEventListener("click", function() {
         overlay.style.backgroundColor = "rgb(0 0 0 / 0.5)";
         // remove buttons "dark" class
         btn.classList.toggle("dark");
+    } 
+    
+    // if button class IS NOT dark
+    else {
+        // change text to "Darken"
+        btn.textContent = "Darken";
+        // change overlay to rgb(0 0 0 / 0)
+        overlay.style.backgroundColor = "rgb(0 0 0 / 0)";
+        // add dark class back to button
+        btn.classList.toggle("dark");
     }
 
 })
