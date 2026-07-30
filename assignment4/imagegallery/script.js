@@ -35,12 +35,12 @@ for (const image of images) {
     thumbBar.appendChild(createdImage);
 
     // make it so the image will run updateDisplayedImage when clicked
-    createdImage.addEventListener("click", updateDisplayedImage());
+    createdImage.addEventListener("click", updateDisplayedImage);
 
     // allow <Enter> key press to make the focused image full sized
     createdImage.addEventListener("keydown", function(EnterPress) {
         if (EnterPress.code === "Enter") {
-            updateDisplayedImage(EnterPress)
+            updateDisplayedImage(EnterPress);
         }
-    })
+    });
 }
