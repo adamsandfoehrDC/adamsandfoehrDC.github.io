@@ -50,3 +50,17 @@ function updateDisplayedImage(EnterPress) {
     displayedImage.src = EnterPress.target.src;
     displayedImage.alt = EnterPress.target.alt;
 }
+
+// add click event listener to btn
+btn.addEventListener("click", function() {
+    // check IF button has "dark" already set as class
+    if (btn.classList.contains("dark")) {
+        // change text to "Lighten"
+        btn.textContent = "Lighten";
+        // change overlay to rgb(0 0 0 / 0.5)
+        overlay.style.backgroundColor = "rgb(0 0 0 / 0.5)";
+        // remove buttons "dark" class
+        btn.classList.toggle("dark");
+    }
+
+})
