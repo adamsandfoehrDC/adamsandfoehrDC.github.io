@@ -59,8 +59,6 @@ btn.addEventListener("click", function() {
         btn.textContent = "Lighten";
         // change overlay to rgb(0 0 0 / 0.5)
         overlay.style.backgroundColor = "rgb(0 0 0 / 0.5)";
-        // remove buttons "dark" class
-        btn.classList.toggle("dark");
     } 
     
     // if button class IS NOT dark
@@ -69,8 +67,9 @@ btn.addEventListener("click", function() {
         btn.textContent = "Darken";
         // change overlay to rgb(0 0 0 / 0)
         overlay.style.backgroundColor = "rgb(0 0 0 / 0)";
-        // add dark class back to button
-        btn.classList.toggle("dark");
     }
 
+    // toggling dark class outside of loop (both loops do it)
+    // toggle either removes OR adds class to an element
+    btn.classList.toggle("dark");
 })
