@@ -44,3 +44,9 @@ for (const image of images) {
         }
     });
 }
+
+// creating updateDisplayedImage function
+function updateDisplayedImage(EnterPress) {
+    displayedImage.src = EnterPress.target.src;
+    displayedImage.alt = EnterPress.target.alt;
+}
