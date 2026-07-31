@@ -86,6 +86,35 @@ class Ball extends Shape {
     }
 }
 
+// creating evilcircle class
+class EvilCircle extends Shape {
+    // constructor only needs x & y passed in
+    constructor(x, y) {
+        // inherit x, y from Shape (20 for velX & velY)
+        super(x, y, 20, 20);
+        // white color, size 10
+        this.color = "white";
+        this.size = 10;
+
+        // add keyboard movement capability to evilcircle (copied from MDN)
+        window.addEventListener("keydown", (event) => {
+            // using if statements because using 'breaks' is a bad practice
+            if (event.key === "a") {
+                this.x -= this.velX;
+            }
+            if (event.key === "d") {
+                this.x += this.velX;
+            }
+            if (event.key === "w") {
+                this.y -= this.velY;
+            }
+            if (event.key === "s") {
+                this.y += this.velY;
+            }
+        })
+    }
+}
+
 // adding balls to canvas
 const balls = [];
 
