@@ -181,16 +181,27 @@ while (balls.length < 25) {
     balls.push(ball);
 }
 
+// creating ONE instance of EvilCircle (should spawn in center of screen)
+const evilCircle = new EvilCircle(width / 2, height / 2);
+
 // drawing created ball objects
 function loop() {
     ctx.fillStyle = "rgb(0 0 0 / 25%)";
     ctx.fillRect(0, 0, width, height);
 
     for (const ball of balls) {
-        ball.draw();
-        ball.update();
-        ball.collisionDetect();
+        // only perform IF ball exists
+        if (ball.exists) {
+            ball.draw();
+            ball.update();
+            ball.collisionDetect();
+        }
     }
+
+    // call EvilCircle functions in every iteration
+    evilCircle.draw();
+    evilCircle.checkBounds();
+    evilCircle.collisionDetect();
 
     requestAnimationFrame(loop);
 }
