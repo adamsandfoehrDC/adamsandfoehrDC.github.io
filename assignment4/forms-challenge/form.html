@@ -61,29 +61,76 @@
             </label>
         </fieldset>
 
-        Describe the chairs (select all you agree with)
-        Comfy
-        Luxurious
-        Hi-tech
-        Pretty
-        Majestic
+        <fieldset>
+            <legend>
+                Describe the chairs (select all you agree with)
+            </legend>
+
+            <input type="checkbox" id="chair-comfy" name="comfy">
+            <label for="chair-comfy">
+                Comfy
+            </label>
+
+            <input type="checkbox" id="chair-luxurious" name="comfy">
+            <label for="chair-luxurious">
+                Luxurious
+            </label>
+
+            <input type="checkbox" id="chair-hitech" name="comfy">
+            <label for="chair-hitech">
+                Hi-tech
+            </label>
+
+            <input type="checkbox" id="chair-pretty" name="comfy">
+            <label for="chair-pretty">
+                Pretty
+            </label>
+
+            <input type="checkbox" id="chair-majestic" name="comfy">
+            <label for="chair-majestic">
+                Majestic
+            </label>
+        </fieldset>
 
         --
 
         About your hosts
 
-        Who's your favorite bear?
-        Papa bear
-        Mama bear
-        Junior
-        Dozer
+        <label for="favourite-bear">
+            Who's your favorite bear?
+        </label>
+        <select name="favourite-bear" id="favourite-bear">
+            <option value="papa-bear">
+                Papa bear
+            </option>
+            <option value="mama-bear">
+                Mama bear
+            </option>
+            <option value="junior-bear">
+                Junior
+            </option>
+            <option value="dozer-bear">
+                Dozer
+            </option>
+        </select>
 
-        Which greeting did you prefer?
-        Wave
-        Friendly greeting
-        Growl
-        Claw marks in the door
-
+        <label for="preferred-greeting">
+            Which greeting did you prefer?
+        </label>
+        <select name="preferred-greeting" id="preferred-greeting">
+            <option value="wave">
+                Wave
+            </option>
+            <option value="friendly-greeting">
+                Friendly greeting
+            </option>
+            <option value="growl">
+                Growl
+            </option>
+            <option value="claw-marks">
+                Claw marks in the door
+            </option>
+        </select>
         --
 
         Any other feedback?
