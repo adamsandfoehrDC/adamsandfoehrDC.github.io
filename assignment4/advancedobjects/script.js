@@ -18,6 +18,17 @@ function randomRGB() {
   return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
 }
 
+// creating shape class
+class Shape {
+    // constructor with x, y, velx & vely
+    constructor(x, y, velX, velY) {
+        this.x = x;
+        this.y = y;
+        this.velX = velX;
+        this.velY = velY;
+    }
+}
+
 // creating ball class
 class Ball {
     constructor(x, y, velX, velY, color, size) {
