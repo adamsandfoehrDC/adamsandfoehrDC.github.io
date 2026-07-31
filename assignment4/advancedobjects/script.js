@@ -1,4 +1,8 @@
 // setup canvas
+// create reference to <p> in HTML
+const paragraph = document.querySelector("p");
+// variable to keep count of balls
+let ballCount = 0;
 
 const canvas = document.querySelector("canvas");
 const ctx = canvas.getContext("2d");
@@ -158,6 +162,10 @@ class EvilCircle extends Shape {
                 if (distance < this.size + ball.size) {
                     // stop collided balls from existing
                     ball.exists = false;
+                    // decrement ballCount for each succesful collision
+                    ballCount--;
+                    // update text on screen
+                    paragraph.textContent = "Ball count: " + ballCount;
                 }
             }
         }
@@ -179,6 +187,11 @@ while (balls.length < 25) {
     );
 
     balls.push(ball);
+
+    // increment ballCounter for each ball created
+    ballCount++;
+    // update counter on page
+    paragraph.textContent = "Ball count: " + ballCount;
 }
 
 // creating ONE instance of EvilCircle (should spawn in center of screen)
