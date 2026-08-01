@@ -102,3 +102,10 @@ button:hover, button:focus {
     background-color: #eeeeee;
     cursor: pointer;
 }
+
+.form-header-image {
+    background: url(https://mdn.github.io/shared-assets/images/examples/learn/woodland-strip.jpg) no-repeat;
+
+    height: 3rem;
+    width: 100%;
+}
